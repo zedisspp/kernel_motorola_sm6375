@@ -42,6 +42,7 @@ EXPORT_TRACEPOINT_SYMBOL_GPL(android_rvh_prepare_prio_fork);
 EXPORT_TRACEPOINT_SYMBOL_GPL(android_rvh_finish_prio_fork);
 EXPORT_TRACEPOINT_SYMBOL_GPL(android_rvh_set_user_nice);
 EXPORT_TRACEPOINT_SYMBOL_GPL(android_rvh_setscheduler);
+EXPORT_TRACEPOINT_SYMBOL_GPL(android_vh_sched_setaffinity_early);
 EXPORT_TRACEPOINT_SYMBOL_GPL(android_vh_mutex_wait_start);
 EXPORT_TRACEPOINT_SYMBOL_GPL(android_vh_mutex_wait_finish);
 EXPORT_TRACEPOINT_SYMBOL_GPL(android_vh_rwsem_read_wait_start);

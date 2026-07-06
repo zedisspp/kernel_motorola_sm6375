@@ -11,6 +11,7 @@
  * mechanism for vendor modules to hook and extend functionality
  */
 struct task_struct;
+struct cpumask;
 DECLARE_RESTRICTED_HOOK(android_rvh_select_task_rq_fair,
 	TP_PROTO(struct task_struct *p, int prev_cpu, int sd_flag, int wake_flags, int *new_cpu),
 	TP_ARGS(p, prev_cpu, sd_flag, wake_flags, new_cpu), 1);
@@ -64,6 +65,10 @@ DECLARE_RESTRICTED_HOOK(android_rvh_set_user_nice,
 DECLARE_RESTRICTED_HOOK(android_rvh_setscheduler,
 	TP_PROTO(struct task_struct *p),
 	TP_ARGS(p), 1);
+
+DECLARE_HOOK(android_vh_sched_setaffinity_early,
+	TP_PROTO(struct task_struct *p, const struct cpumask *new_mask, bool *skip),
+	TP_ARGS(p, new_mask, skip));
 
 struct sched_group;
 DECLARE_RESTRICTED_HOOK(android_rvh_find_busiest_group,
