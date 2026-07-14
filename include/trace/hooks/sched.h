@@ -33,6 +33,10 @@ DECLARE_RESTRICTED_HOOK(android_rvh_update_cpu_capacity,
 	TP_PROTO(int cpu, unsigned long *capacity),
 	TP_ARGS(cpu, capacity), 1);
 
+DECLARE_HOOK(android_vh_dynamic_svp_preempt,
+	TP_PROTO(struct task_struct *p, struct task_struct *curr, bool *preempt),
+	TP_ARGS(p, curr, preempt));
+
 DECLARE_RESTRICTED_HOOK(android_rvh_enqueue_task,
 	TP_PROTO(struct rq *rq, struct task_struct *p),
 	TP_ARGS(rq, p), 1);

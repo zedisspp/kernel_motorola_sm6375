@@ -37,6 +37,7 @@ EXPORT_TRACEPOINT_SYMBOL_GPL(android_rvh_select_task_rq_rt);
 EXPORT_TRACEPOINT_SYMBOL_GPL(android_rvh_select_fallback_rq);
 EXPORT_TRACEPOINT_SYMBOL_GPL(android_vh_scheduler_tick);
 EXPORT_TRACEPOINT_SYMBOL_GPL(android_rvh_update_cpu_capacity);
+EXPORT_TRACEPOINT_SYMBOL_GPL(android_vh_dynamic_svp_preempt);
 EXPORT_TRACEPOINT_SYMBOL_GPL(android_rvh_enqueue_task);
 EXPORT_TRACEPOINT_SYMBOL_GPL(android_rvh_dequeue_task);
 EXPORT_TRACEPOINT_SYMBOL_GPL(android_rvh_can_migrate_task);
