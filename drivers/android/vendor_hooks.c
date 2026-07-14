@@ -26,6 +26,7 @@
 #include <trace/hooks/vmscan.h>
 #include <trace/hooks/fs.h>
 #include <trace/hooks/gpu.h>
+#include <trace/hooks/input.h>
 
 /*
  * Export tracepoints that act as a bare tracehook (ie: have no trace event
@@ -100,3 +101,4 @@ EXPORT_TRACEPOINT_SYMBOL_GPL(android_vh_mem_cgroup_free);
 EXPORT_TRACEPOINT_SYMBOL_GPL(android_vh_mem_cgroup_alloc);
 EXPORT_TRACEPOINT_SYMBOL_GPL(android_vh_iolimit_rw);
 EXPORT_TRACEPOINT_SYMBOL_GPL(android_vh_gpu_context_create);
+EXPORT_TRACEPOINT_SYMBOL_GPL(android_vh_input_sync);
