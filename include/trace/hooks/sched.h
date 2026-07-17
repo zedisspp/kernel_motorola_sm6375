@@ -12,6 +12,7 @@
  */
 struct task_struct;
 struct cpumask;
+struct cpufreq_policy;
 DECLARE_RESTRICTED_HOOK(android_rvh_select_task_rq_fair,
 	TP_PROTO(struct task_struct *p, int prev_cpu, int sd_flag, int wake_flags, int *new_cpu),
 	TP_ARGS(p, prev_cpu, sd_flag, wake_flags, new_cpu), 1);
@@ -90,8 +91,9 @@ DECLARE_RESTRICTED_HOOK(android_rvh_find_busiest_group,
 
 DECLARE_HOOK(android_vh_map_util_freq,
 	TP_PROTO(unsigned long util, unsigned long freq,
-		unsigned long cap, unsigned long *next_freq),
-	TP_ARGS(util, freq, cap, next_freq));
+		unsigned long cap, unsigned long *next_freq,
+		struct cpufreq_policy *policy, bool *need_freq_update),
+	TP_ARGS(util, freq, cap, next_freq, policy, need_freq_update));
 
 struct em_perf_domain;
 DECLARE_HOOK(android_vh_em_pd_energy,
